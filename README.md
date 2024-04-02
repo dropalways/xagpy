@@ -18,3 +18,34 @@ xagpy = xagpy(token)
 coins = xagpy.get_coins()
 print("Coins:", coins)
 ```
+
+> Generate an account
+
+```py
+from xagpy import xagpy
+
+token = ""
+xagpy = xagpy(token)
+coins = xagpy.generate_account()
+print("Generated Account:", coins)
+```
+
+> Generate an account in test mode
+
+```py
+from xagpy import xagpy
+
+token = ""
+xagpy = xagpy(token)
+coins = xagpy.generate_account(test_mode=True)
+print("Generated Account:", coins)
+```
+
+> Get current stock
+
+```py
+from xagpy import xagpy
+
+stock = xagpy.get_stock()
+print("Stock Data:", stock)
+```

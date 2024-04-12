@@ -26,8 +26,8 @@ from xagpy import xagpy
 
 token = ""
 xagpy = xagpy(token)
-coins = xagpy.generate_account()
-print("Generated Account:", coins)
+account = xagpy.generate_account()
+print("Generated Account:", account)
 ```
 
 > Generate an account in test mode
@@ -37,8 +37,8 @@ from xagpy import xagpy
 
 token = ""
 xagpy = xagpy(token)
-coins = xagpy.generate_account(test_mode=True)
-print("Generated Account:", coins)
+account = xagpy.generate_account(test_mode=True)
+print("Generated Account:", account)
 ```
 
 > Get current stock

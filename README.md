@@ -1,10 +1,18 @@
 # xagpy
 
-Api wrapper for the Xag(Xbox account generator) api
+```
+pip install xagpy
+```
+
+Api wrapper for the xag(xbox account generator) api
 
 # How to use
 
-1. Get a api key from this [discord server](https://discord.gg/Ytbnqh2PvM)
+1. Join this [discord server](https://discord.gg/Ytbnqh2PvM)
+
+2. Do /apitoken (this will be your token)
+
+
 
 # Example code
 

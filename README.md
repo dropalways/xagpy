@@ -1,10 +1,18 @@
 # xagpy
 
-Api wrapper for the Xag(Xbox account generator) api
+```
+pip install xagpy
+```
+
+Api wrapper for the xag(xbox account generator) api
 
 # How to use
 
-1. Get a api key from this [discord server](https://discord.gg/Ytbnqh2PvM)
+1. Join this [discord server](https://discord.gg/Ytbnqh2PvM)
+
+2. Do /apitoken (this will be your token)
+
+
 
 # Example code
 
@@ -26,8 +34,8 @@ from xagpy import xagpy
 
 token = ""
 xagpy = xagpy(token)
-coins = xagpy.generate_account()
-print("Generated Account:", coins)
+account = xagpy.generate_account()
+print("Generated Account:", account)
 ```
 
 > Generate an account in test mode
@@ -37,8 +45,8 @@ from xagpy import xagpy
 
 token = ""
 xagpy = xagpy(token)
-coins = xagpy.generate_account(test_mode=True)
-print("Generated Account:", coins)
+account = xagpy.generate_account(test_mode=True)
+print("Generated Account:", account)
 ```
 
 > Get current stock

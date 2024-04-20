@@ -6,11 +6,12 @@ xagpy = xagpy(api_token)
 
 
 def main():
-    # Test generate_account() method
-    # print("Testing generate_account():")
-    # print("Generating account without test mode:")
-    # account_data = xagpy.generate_account()
-    # print("Generated Account:", account_data)
+
+  # Test generate_account() method
+  # print("Testing generate_account():")
+  # print("Generating account without test mode:")
+  # account_data = xagpy.generate_account()
+  # print("Generated Account:", account_data)
 
     print("Testing get_coins():")
     coins = xagpy.get_coins()

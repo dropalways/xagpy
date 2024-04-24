@@ -5,12 +5,12 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name='xagpy',
-    version='0.2',
+    version='0.3',
     packages=find_packages(),
     install_requires=['requests'],
     description='Api wrapper for the Xag(Xbox account generator) api',
     long_description=long_description,
-    long_description_content_type="text/markdown",  # or "text/x-rst" if using RST
+    long_description_content_type="text/markdown",
     url='https://github.com/dropalways/xagpy',
     license='MIT',
 )

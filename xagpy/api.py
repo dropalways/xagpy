@@ -26,17 +26,11 @@ class xagpy:
                 429: "You have sent too many requests. | 429",
                 401: "Unauthorised. | 401",
                 400: "Bad request. | 400",
-
-
+                403: None,
             }
             error_message = error_messages.get(
                 status_code, f"Unexpected response | Status Code: {status_code} | Error Message: {response.json}")
-            if status_code == 200:
-                pass
-            else:
-                print(error_message)
-            if status_code == 200:
-                return response.json()
+            return error_message
         except requests.exceptions.HTTPError as e:
             print("HTTP error occurred:", e)
         return None
@@ -49,10 +43,12 @@ class xagpy:
         else:
             # this never should happen if this happens, we are all doomed.
             url = f"{self.base_url}/generate?type=xbox"
-            print("wtf happend heere this code shoudl-d work??!?!?!!")
         if test_mode:
             url += "&test_mode"
-        headers = {"api-token": self.api_token}
+            headers = None
+        else:
+            headers = {"api-token": self.api_token}
+
         response = requests.post(url, headers=headers, timeout=timeout)
         return self._handle_response(response)
 
@@ -65,4 +61,15 @@ class xagpy:
         url = f"{self.base_url}/coins"
         headers = {"api-token": self.api_token}
         response = requests.get(url, headers=headers, timeout=timeout)
+        return self._handle_response(response)
+
+    def get_xagplus(self, timeout=3, test_mode=False) -> object:
+        url = f"{self.base_url}/buy_plus"
+        if test_mode:
+            url += "&test_mode=True"
+            headers = None
+        else:
+            headers = {"api-token": self.api_token}
+        response = requests.get(url, headers=headers, timeout=timeout)
+        print(response.json())
         return self._handle_response(response)

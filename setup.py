@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name='xagpy',
-    version='0.3',
+    version='0.5',
     packages=find_packages(),
     install_requires=['requests'],
     description='Api wrapper for the Xag(Xbox account generator) api',

